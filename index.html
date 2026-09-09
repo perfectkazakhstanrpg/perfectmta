@@ -3,364 +3,305 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Perfect Kazakhstan | RPG</title>
-    <!-- Браузер табына (favicon) логотип қосу -->
-    <link rel="icon" type="image/png" href="logo.png">
+    <title>PERFECT KAZAKHSTAN | RPG</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary: #2563eb;
-            --primary-hover: #1d4ed8;
-            --card-bg: rgba(18, 22, 32, 0.85);
-            --text: #ffffff;
-            --text-dim: #94a3b8;
-        }
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Montserrat', sans-serif;
         }
-
-        /* --- Скроллды жұқа және көк түске өзгерту --- */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: #050811;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: #2563eb;
-            border-radius: 4px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: #1d4ed8;
-        }
-        /* ------------------------------------------- */
 
         body {
-            background-color: #050811;
-            color: var(--text);
-            line-height: 1.5;
-            padding-bottom: 30px;
-            overflow-x: hidden;
-            position: relative;
-            min-height: 100vh;
-        }
-
-        /* Ағып тұрған жұлдыздар фоны */
-        .stars-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: -1;
-            background: radial-gradient(ellipse at bottom, #090d19 0%, #020408 100%);
-        }
-
-        .star {
-            position: absolute;
-            background: #3b82f6;
-            border-radius: 50%;
-            animation: fall linear infinite;
-            box-shadow: 0 0 8px #3b82f6, 0 0 15px #60a5fa;
-        }
-
-        @keyframes fall {
-            0% {
-                transform: translateY(-10vh) translateX(0);
-                opacity: 0;
-            }
-            10% { opacity: 1; }
-            90% { opacity: 1; }
-            100% {
-                transform: translateY(110vh) translateX(-50px);
-                opacity: 0;
-            }
-        }
-
-        /* --- Басты беттің фонына сурет қою --- */
-        header {
-            text-align: center;
-            padding: 50px 15px;
-            background: linear-gradient(rgba(5, 8, 17, 0.75), rgba(5, 8, 17, 0.85)), url('background.jpg');
+            background: linear-gradient(rgba(10, 10, 15, 0.85), rgba(10, 10, 15, 0.90)), 
+                        url('https://wallpapers.com/images/featured/gta-5-background-9k47t4u86m00x5v2.jpg');
             background-size: cover;
             background-position: center;
-            border-bottom: 2px solid var(--primary);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #ffffff;
+            min-height: 100vh;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
-        h1 {
-            font-size: 2.4rem;
-            color: #60a5fa;
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 2.8rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+            background: linear-gradient(45deg, #ff6b00, #ff8800, #ffae00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 5px;
-            text-shadow: 0 0 15px rgba(37, 99, 235, 0.7);
+            text-shadow: 0 10px 20px rgba(255, 107, 0, 0.3);
+            margin-bottom: 10px;
         }
 
-        header p {
-            font-size: 1rem;
-            color: var(--text-dim);
+        .header p {
+            color: #a0a5b5;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 25px;
         }
 
-        .container {
-            max-width: 850px;
-            margin: 0 auto;
-            padding: 0 15px;
-            position: relative;
-            z-index: 1;
+        .btn-group {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
         }
 
         .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            background: var(--primary);
-            color: #fff;
+            padding: 12px 28px;
+            border-radius: 10px;
+            font-weight: 700;
             text-decoration: none;
-            font-weight: bold;
-            font-size: 0.9rem;
-            border-radius: 5px;
-            transition: 0.3s;
-            margin: 6px 4px;
-            border: none;
-            cursor: pointer;
+            color: #fff;
+            background: linear-gradient(135deg, #0088cc, #005580);
+            box-shadow: 0 4px 15px rgba(0, 136, 204, 0.4);
+            transition: all 0.3s ease;
         }
 
         .btn:hover {
-            background: var(--primary-hover);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.5);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 136, 204, 0.6);
         }
 
-        .btn-tg { background: #24A1DE; }
-        .btn-tg:hover { background: #1b85b8; box-shadow: 0 4px 15px rgba(36, 161, 222, 0.5); }
+        .btn-bot {
+            background: linear-gradient(135deg, #ff6b00, #cc5500);
+            box-shadow: 0 4px 15px rgba(255, 107, 0, 0.4);
+        }
 
-        .btn-discord { background: #5865F2; }
-        .btn-discord:hover { background: #4752C4; box-shadow: 0 4px 15px rgba(88, 101, 242, 0.5); }
+        .btn-bot:hover {
+            box-shadow: 0 6px 20px rgba(255, 107, 0, 0.6);
+        }
 
         .section-title {
             text-align: center;
-            margin: 25px 0 15px;
-            font-size: 1.4rem;
-            color: #60a5fa;
-            border-bottom: 2px solid var(--primary);
-            display: inline-block;
-            padding-bottom: 3px;
-        }
-
-        .center-wrapper {
-            text-align: center;
-        }
-
-        .hierarchy-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 10px;
-            margin-top: 10px;
-        }
-
-        .role-card {
-            background: var(--card-bg);
-            backdrop-filter: blur(10px);
-            padding: 12px 15px;
-            border-radius: 6px;
-            text-align: center;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-left: 3px solid var(--primary);
-        }
-
-        .role-title {
-            font-size: 0.8rem;
-            color: var(--text-dim);
+            font-size: 2rem;
+            font-weight: 800;
+            margin: 40px 0 25px 0;
+            position: relative;
             text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
-        .role-name {
-            font-size: 1.1rem;
-            font-weight: bold;
-            color: #fff;
-            margin-top: 3px;
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: #ff6b00;
+            margin: 8px auto 0 auto;
+            border-radius: 2px;
+            box-shadow: 0 0 10px #ff6b00;
         }
 
-        .owner { border-color: #ef4444; }
-        .owner .role-name { color: #ef4444; }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 1100px;
+            margin-bottom: 30px;
+        }
 
-        .info-card {
-            background: var(--card-bg);
+        .card {
+            background: rgba(20, 22, 32, 0.75);
             backdrop-filter: blur(10px);
-            padding: 18px;
-            border-radius: 6px;
-            margin-bottom: 15px;
-            font-size: 0.95rem;
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
         }
 
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255, 107, 0, 0.5);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+        }
+
+        .role {
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            color: #8a8f9e;
+        }
+
+        .nickname {
+            font-size: 1.3rem;
+            font-weight: 800;
+        }
+
+        /* Түстік белгілер мен неон эффекттері */
+        .card.owner { border-left: 4px solid #ff3366; }
+        .card.owner .role { color: #ff3366; }
+        .card.owner .nickname { color: #ffffff; text-shadow: 0 0 10px rgba(255, 51, 102, 0.5); }
+
+        .card.head { border-left: 4px solid #ffcc00; }
+        .card.head .role { color: #ffcc00; }
+
+        .card.media { border-left: 4px solid #a855f7; }
+        .card.media .role { color: #a855f7; }
+
+        .card.main-watch { border-left: 4px solid #00f2fe; }
+        .card.main-watch .role { color: #00f2fe; }
+        .card.main-watch .nickname.empty { color: #6c757d; font-style: italic; font-weight: 600; }
+
+        .card.senior-watch { border-left: 4px solid #3b82f6; }
+        .card.senior-watch .role { color: #3b82f6; }
+
+        .card.watch { border-left: 4px solid #10b981; }
+        .card.watch .role { color: #10b981; }
+
+        /* Серверге қосылу блогы */
         .ip-box {
-            background: rgba(5, 8, 17, 0.8);
-            padding: 12px;
-            border-radius: 5px;
-            font-family: monospace;
-            font-size: 1.1rem;
+            background: rgba(20, 22, 32, 0.85);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 107, 0, 0.3);
+            border-radius: 16px;
+            padding: 30px;
             text-align: center;
-            color: #60a5fa;
-            user-select: all;
-            margin: 10px 0;
+            width: 100%;
+            max-width: 700px;
+            margin-top: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .ip-field {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 12px;
+            gap: 15px;
+            background: rgba(10, 10, 15, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 12px 20px;
+            border-radius: 10px;
+            margin-top: 15px;
             flex-wrap: wrap;
-            border: 1px solid rgba(37, 99, 235, 0.3);
         }
 
-        .btn-copy {
-            padding: 6px 14px;
-            font-size: 0.85rem;
-            margin: 0;
+        .ip-text {
+            font-family: monospace;
+            font-size: 1.2rem;
+            color: #ff8800;
+            font-weight: 700;
         }
 
-        ol {
-            margin-left: 18px;
+        .copy-btn {
+            background: #ff6b00;
+            color: #fff;
+            border: none;
+            padding: 8px 18px;
+            border-radius: 8px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.2s;
         }
 
-        ol li {
-            margin-bottom: 6px;
-        }
-
-        .link-url {
-            color: #60a5fa;
-            text-decoration: underline;
-            word-break: break-all;
-        }
-
-        .link-url:hover {
-            color: #93c5fd;
+        .copy-btn:hover {
+            background: #e05e00;
         }
     </style>
 </head>
 <body>
 
-    <div class="stars-bg" id="starsContainer"></div>
-
-    <header>
-        <h1>Perfect Kazakhstan | RPG</h1>
+    <!-- Тақырыптық Блок -->
+    <div class="header">
+        <h1>PERFECT KAZAKHSTAN | RPG</h1>
         <p>Қазақстандағы ең мықты және қызықты MTA RPG серверлерінің бірі!</p>
-        
-        <div style="margin-top: 15px;">
-            <a href="https://t.me/+8u15Xui4Va4wZjJi" target="_blank" class="btn btn-tg">Telegram Канал</a>
-            <a href="https://t.me/PerfectRPG_bot" target="_blank" class="btn btn-tg">Telegram bot</a>
-            <a href="https://discord.gg/74NAY53qH" target="_blank" class="btn btn-discord">Discord Сервер</a>
+        <div class="btn-group">
+            <a href="https://t.me/PerfectRPG_bot" target="_blank" class="btn">Telegram Канал</a>
+            <a href="https://t.me/PerfectRPG_bot" target="_blank" class="btn btn-bot">Telegram Bot</a>
         </div>
-    </header>
+    </div>
 
-    <div class="container">
-
-        <div class="center-wrapper">
-            <h2 class="section-title">Сервер Басшылығы</h2>
+    <!-- Сервер Басшылығы -->
+    <h2 class="section-title">Сервер Басшылығы</h2>
+    
+    <div class="grid-container">
+        <!-- Владелец -->
+        <div class="card owner">
+            <div class="role">Владелец</div>
+            <div class="nickname">BAURIGO</div>
         </div>
-        
-        <div class="hierarchy-grid">
-            <div class="role-card owner">
-                <div class="role-title">Владелец</div>
-                <div class="role-name">BAURIGO</div>
-            </div>
-            <div class="role-card">
-                <div class="role-title">Руководство</div>
-                <div class="role-name">Richard</div>
-            </div>
-            <div class="role-card">
-                <div class="role-title">Медиа Куратор</div>
-                <div class="role-name">10bagaNN</div>
-            </div>
-            <div class="role-card">
-                <div class="role-title">Главный Смотрящий</div>
-                <div class="role-name">XXX</div>
-            </div>
-            <div class="role-card">
-                <div class="role-title">Старший Смотрящий</div>
-                <div class="role-name">Shok</div>
-            </div>
-            <div class="role-card">
-                <div class="role-title">Смотрящий</div>
-                <div class="role-name">Sueta</div>
-            </div>
+        <div class="card owner">
+            <div class="role">Владелец</div>
+            <div class="nickname">Sake</div>
         </div>
 
-        <div class="center-wrapper">
-            <h2 class="section-title">Серверге қосылу</h2>
-        </div>
-        <div class="info-card">
-            <p style="text-align: center;">МТА клиентін ашып, келесі IP мекенжайды енгізіңіз:</p>
-            <div class="ip-box">
-                <span id="server-ip">mtasa://87.228.5.7:22003</span>
-                <button class="btn btn-copy" id="copy-btn" onclick="copyIP()">Копировать</button>
-            </div>
+        <!-- Руководство -->
+        <div class="card head">
+            <div class="role">Руководство</div>
+            <div class="nickname">Richard</div>
         </div>
 
-        <div class="center-wrapper">
-            <h2 class="section-title">Ойынды қалай жүктеуге болады?</h2>
+        <!-- Медиа Куратор -->
+        <div class="card media">
+            <div class="role">Медиа Куратор</div>
+            <div class="nickname">10bagaNN</div>
         </div>
-        <div class="info-card">
-            <ol>
-                <li>Компьютеріңізге таза <strong>GTA San Andreas</strong> ойынын орнатыңыз (<a href="https://disk.yandex.kz/d/ydf5ZKAhb8v4Gg" target="_blank" class="link-url">https://disk.yandex.kz/d/ydf5ZKAhb8v4Gg</a>)</li>
-                <li>Официалды сайттан <strong>Multi Theft Auto (MTA:SA)</strong> клиентін жүктеңіз (<a href="https://multitheftauto.com" target="_blank" class="link-url">https://multitheftauto.com</a>).</li>
-                <li>MTA орнату барысында GTA San Andreas папкасын көрсетіңіз.</li>
-                <li>МТА-ны ашып Настройка-Интерфейс бөліміне өтіп жазуды Руский дегенге ауыстырыңыз.</li>
-                <li>MTA-ны ашып, <strong>Список серверов</strong> бөлімін басып, төбеге осы IP-ді жазып, <strong>Подключиться</strong> батырмасын басып серверге кіресіз.</li>
-            </ol>
+        <div class="card media">
+            <div class="role">Медиа Куратор</div>
+            <div class="nickname">vNET</div>
         </div>
 
-        <div class="center-wrapper">
-            <h2 class="section-title">Сервер туралы</h2>
-        </div>
-        <div class="info-card">
-            <p><strong>Perfect Kazakhstan | RPG</strong> — бұл бірегей автокөліктер, қазақстандық атмосфера, дамыған жұмыс жүйесі және шынайы RolePlay ортасы бар сервер. Өзіңізге ұнайтын жұмысқа орналасып, үй мен көлік сатып алыңыз, фракцияларға кіріңіз немесе өз бизнес империяңызды құрыңыз!</p>
+        <!-- Главный смотрящий -->
+        <div class="card main-watch">
+            <div class="role">Главный смотрящий</div>
+            <div class="nickname empty">Бос (Вакантно)</div>
         </div>
 
+        <!-- Старший смотрящий -->
+        <div class="card senior-watch">
+            <div class="role">Старший смотрящий</div>
+            <div class="nickname">Nazarbaevv_</div>
+        </div>
+
+        <!-- Смотрящий -->
+        <div class="card watch">
+            <div class="role">Смотрящий</div>
+            <div class="nickname">ARSEN4IK</div>
+        </div>
+        <div class="card watch">
+            <div class="role">Смотрящий</div>
+            <div class="nickname">KETO</div>
+        </div>
+        <div class="card watch">
+            <div class="role">Смотрящий</div>
+            <div class="nickname">mad1kosh</div>
+        </div>
+    </div>
+
+    <!-- Серверге қосылу -->
+    <div class="ip-box">
+        <h2 style="font-size: 1.5rem; font-weight: 800; text-transform: uppercase;">Серверке қосылу</h2>
+        <p style="color: #a0a5b5; margin-top: 5px; font-size: 0.95rem;">MTA клиентін ашып, келесі IP мекенжайды енгізіңіз:</p>
+        <div class="ip-field">
+            <span class="ip-text" id="ipText">mtasa://87.228.5.7:22003</span>
+            <button class="copy-btn" onclick="copyIP()">Копировать</button>
+        </div>
     </div>
 
     <script>
-        const starsContainer = document.getElementById('starsContainer');
-        const starsCount = 50;
-
-        for (let i = 0; i < starsCount; i++) {
-            const star = document.createElement('div');
-            star.classList.add('star');
-            
-            const size = Math.random() * 3 + 1;
-            star.style.width = `${size}px`;
-            star.style.height = `${size}px`;
-            star.style.left = `${Math.random() * 100}vw`;
-            star.style.top = `${Math.random() * -100}vh`;
-            
-            const duration = Math.random() * 3 + 2;
-            const delay = Math.random() * 5;
-            
-            star.style.animationDuration = `${duration}s`;
-            star.style.animationDelay = `${delay}s`;
-            
-            starsContainer.appendChild(star);
-        }
-
         function copyIP() {
-            var ipText = document.getElementById("server-ip").innerText;
-            var btn = document.getElementById("copy-btn");
-            
-            navigator.clipboard.writeText(ipText).then(function() {
-                btn.innerText = "Скопировано!";
-                btn.style.background = "#22c55e";
-                setTimeout(function() {
-                    btn.innerText = "Копировать";
-                    btn.style.background = "var(--primary)";
-                }, 2000);
-            });
+            const ip = "mtasa://87.228.5.7:22003";
+            navigator.clipboard.writeText(ip);
+            alert("Сервер IP мекенжайы көшірілді: " + ip);
         }
     </script>
-
 </body>
 </html>
