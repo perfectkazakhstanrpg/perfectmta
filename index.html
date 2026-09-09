@@ -23,7 +23,6 @@
             position: relative;
         }
 
-        /* Canvas фон (Ағатын жұлдыздар) */
         #starfield {
             position: fixed;
             top: 0;
@@ -42,46 +41,58 @@
             z-index: 1;
         }
 
-        /* Top Navigation Bar */
         .top-bar {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 0;
+            padding: 20px 0;
             border-bottom: 1px solid rgba(0, 162, 255, 0.15);
-            margin-bottom: 20px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+            gap: 15px;
         }
 
         .brand {
             display: flex;
             align-items: center;
-            gap: 10px;
-            font-weight: 800;
-            font-size: 1.1rem;
+            gap: 12px;
+            font-weight: 900;
+            font-size: 1.3rem;
             letter-spacing: 1px;
+            color: #fff;
+            text-shadow: 0 0 10px rgba(0, 162, 255, 0.5);
         }
 
-        .discord-btn {
+        .social-links {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .social-btn {
             background: rgba(0, 162, 255, 0.1);
             border: 1px solid rgba(0, 162, 255, 0.3);
             color: #fff;
-            padding: 8px 16px;
+            padding: 10px 18px;
             border-radius: 8px;
             text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
+            font-weight: 700;
+            font-size: 0.85rem;
             display: flex;
             align-items: center;
             gap: 8px;
             transition: 0.3s;
         }
 
-        .discord-btn:hover {
-            background: #00a2ff;
-            box-shadow: 0 0 15px rgba(0, 162, 255, 0.6);
-        }
+        .social-btn.telegram { border-color: rgba(0, 136, 204, 0.5); }
+        .social-btn.telegram:hover { background: #0088cc; box-shadow: 0 0 15px rgba(0, 136, 204, 0.6); }
 
-        /* Main Hero Banner */
+        .social-btn.discord { border-color: rgba(88, 101, 242, 0.5); }
+        .social-btn.discord:hover { background: #5865F2; box-shadow: 0 0 15px rgba(88, 101, 242, 0.6); }
+
+        .social-btn.bot { border-color: rgba(0, 225, 255, 0.5); }
+        .social-btn.bot:hover { background: #00e1ff; color: #000; box-shadow: 0 0 15px rgba(0, 225, 255, 0.6); }
+
         .hero-banner {
             background: linear-gradient(90deg, rgba(2,10,25,0.95) 0%, rgba(5,20,50,0.8) 100%), 
                         url('https://wallpapers.com/images/featured/gta-5-background-9k47t4u86m00x5v2.jpg') center/cover;
@@ -92,19 +103,17 @@
             align-items: center;
             border: 1px solid rgba(0, 162, 255, 0.3);
             box-shadow: 0 0 30px rgba(0, 162, 255, 0.2);
-            margin-bottom: 25px;
-            position: relative;
-            overflow: hidden;
+            margin-bottom: 30px;
         }
 
         .hero-content h2 {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             color: #8ab4f8;
             font-weight: 600;
         }
 
         .hero-content h1 {
-            font-size: 3rem;
+            font-size: 2.8rem;
             font-weight: 900;
             letter-spacing: 2px;
             text-transform: uppercase;
@@ -113,46 +122,18 @@
             text-shadow: 0 0 20px rgba(0, 162, 255, 0.6);
         }
 
-        .hero-content h1 span {
-            color: #00a2ff;
-        }
-
-        .action-btn {
-            background: #00a2ff;
-            color: #fff;
-            padding: 12px 24px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 700;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            box-shadow: 0 4px 15px rgba(0, 162, 255, 0.4);
-            transition: 0.3s;
-        }
-
-        .action-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0, 162, 255, 0.7);
-        }
-
-        /* Server List / Monitoring */
-        .server-list {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            margin-bottom: 25px;
-        }
+        .hero-content h1 span { color: #00a2ff; }
 
         .server-card {
             background: rgba(10, 20, 40, 0.7);
             border: 1px solid rgba(0, 162, 255, 0.2);
             border-radius: 12px;
-            padding: 15px 25px;
+            padding: 18px 25px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             backdrop-filter: blur(10px);
+            margin-bottom: 35px;
         }
 
         .server-info {
@@ -166,34 +147,22 @@
             color: #fff;
             font-size: 0.75rem;
             font-weight: 800;
-            padding: 4px 10px;
+            padding: 5px 12px;
             border-radius: 6px;
             text-transform: uppercase;
             box-shadow: 0 0 10px rgba(0, 162, 255, 0.5);
         }
 
-        .server-name {
-            font-weight: 700;
-            font-size: 1.1rem;
-        }
-
-        .online-badge {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            color: #8ab4f8;
-            border: 1px solid rgba(0, 162, 255, 0.2);
-        }
+        .server-name { font-weight: 700; font-size: 1.1rem; }
 
         .connect-btn {
             background: rgba(0, 162, 255, 0.15);
             color: #fff;
             border: 1px solid rgba(0, 162, 255, 0.4);
-            padding: 8px 16px;
+            padding: 10px 20px;
             border-radius: 8px;
             cursor: pointer;
-            font-weight: 600;
+            font-weight: 700;
             transition: 0.3s;
             display: flex;
             align-items: center;
@@ -205,75 +174,112 @@
             box-shadow: 0 0 15px rgba(0, 162, 255, 0.6);
         }
 
-        /* Stats Bar */
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-            gap: 15px;
-            margin-bottom: 40px;
+        .section-title {
+            font-size: 1.4rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #fff;
         }
 
-        .stat-card {
+        .useful-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 45px;
+        }
+
+        .useful-card {
             background: rgba(10, 20, 40, 0.7);
             border: 1px solid rgba(0, 162, 255, 0.2);
             border-radius: 12px;
-            padding: 20px;
-            text-align: center;
+            padding: 22px;
             backdrop-filter: blur(10px);
+            transition: 0.3s;
         }
 
-        .stat-card.active-vip {
-            border: 1px solid #ffb700;
-            box-shadow: 0 0 15px rgba(255, 183, 0, 0.2);
+        .useful-card:hover {
+            border-color: #00a2ff;
+            transform: translateY(-4px);
+            box-shadow: 0 5px 20px rgba(0, 162, 255, 0.25);
         }
 
-        .stat-value {
-            font-size: 1.8rem;
-            font-weight: 900;
+        .useful-card i {
+            font-size: 2rem;
             color: #00a2ff;
-            margin-bottom: 5px;
-            text-shadow: 0 0 10px rgba(0, 162, 255, 0.5);
+            margin-bottom: 12px;
         }
 
-        .stat-card.active-vip .stat-value {
-            color: #ffb700;
-            text-shadow: 0 0 10px rgba(255, 183, 0, 0.5);
+        .useful-card h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 8px;
         }
 
-        .stat-label {
-            font-size: 0.8rem;
+        .useful-card p {
+            font-size: 0.85rem;
             color: #8ab4f8;
-            font-weight: 600;
-            text-transform: uppercase;
+            line-height: 1.4;
+            margin-bottom: 15px;
         }
 
-        /* Team Section */
+        .useful-btn {
+            display: inline-block;
+            background: rgba(0, 162, 255, 0.2);
+            color: #fff;
+            border: 1px solid rgba(0, 162, 255, 0.4);
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .useful-btn:hover {
+            background: #00a2ff;
+        }
+
         .section-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 10px;
         }
 
-        .section-header h3 {
-            font-size: 1.3rem;
-            font-weight: 800;
-            display: flex;
-            align-items: center;
-            gap: 10px;
+        .filter-btn {
+            background: rgba(0, 162, 255, 0.15);
+            border: 1px solid rgba(0, 162, 255, 0.4);
+            color: #00a2ff;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background: #00a2ff;
+            color: #fff;
+            box-shadow: 0 0 12px rgba(0, 162, 255, 0.5);
         }
 
         .team-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 18px;
         }
 
         .team-card {
             background: rgba(10, 20, 40, 0.7);
             border: 1px solid rgba(0, 162, 255, 0.2);
             border-radius: 12px;
-            padding: 25px 15px;
+            padding: 22px 15px;
             text-align: center;
             transition: 0.3s;
             backdrop-filter: blur(10px);
@@ -286,164 +292,159 @@
         }
 
         .avatar {
-            width: 70px;
-            height: 70px;
+            width: 75px;
+            height: 75px;
             border-radius: 50%;
-            margin: 0 auto 15px auto;
+            margin: 0 auto 12px auto;
             border: 2px solid #00a2ff;
             padding: 3px;
             object-fit: cover;
-            box-shadow: 0 0 10px rgba(0, 162, 255, 0.4);
+            box-shadow: 0 0 12px rgba(0, 162, 255, 0.4);
         }
 
-        .member-name {
-            font-weight: 800;
-            font-size: 1.1rem;
-            margin-bottom: 5px;
-        }
-
-        .member-role {
-            font-size: 0.75rem;
-            color: #00a2ff;
-            font-weight: 700;
-            text-transform: uppercase;
-            margin-bottom: 15px;
-        }
-
-        .profile-btn {
-            background: rgba(255, 255, 255, 0.05);
-            color: #aaa;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 6px 14px;
-            border-radius: 6px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            cursor: pointer;
-            width: 100%;
-            transition: 0.2s;
-        }
-
-        .profile-btn:hover {
-            background: #00a2ff;
-            color: #fff;
-            border-color: #00a2ff;
-        }
+        .member-name { font-weight: 800; font-size: 1.1rem; margin-bottom: 4px; }
+        .member-role { font-size: 0.75rem; color: #00a2ff; font-weight: 700; text-transform: uppercase; }
+        .vacant { color: #888; font-style: italic; }
     </style>
 </head>
 <body>
 
-    <!-- Фондағы жұлдыздар -->
     <canvas id="starfield"></canvas>
 
     <div class="container">
-        <!-- Header -->
+        <!-- Social & Bot Navigation -->
         <div class="top-bar">
             <div class="brand">
                 <i class="fa-solid fa-gamepad" style="color: #00a2ff;"></i>
                 <span>PERFECT PROJECT</span>
             </div>
-            <a href="https://t.me/PerfectRPG_bot" target="_blank" class="discord-btn">
-                <i class="fa-brands fa-telegram"></i> Telegram Bot
-            </a>
-        </div>
-
-        <!-- Banner -->
-        <div class="hero-banner">
-            <div class="hero-content">
-                <h2>Біздің Телеграм Бот</h2>
-                <h1>PERFECT <span>KAZAKHSTAN</span></h1>
-                <a href="https://t.me/PerfectRPG_bot" target="_blank" class="action-btn">
-                    <i class="fa-solid fa-arrow-right-to-bracket"></i> Ботқа өту
+            <div class="social-links">
+                <a href="https://t.me/+8u15Xui4Va4wZjJi" target="_blank" class="social-btn telegram">
+                    <i class="fa-brands fa-telegram"></i> Telegram Канал
+                </a>
+                <a href="https://discord.gg/Vbe7Btq7S" target="_blank" class="social-btn discord">
+                    <i class="fa-brands fa-discord"></i> Discord Server
+                </a>
+                <a href="https://t.me/PerfectRPG_bot" target="_blank" class="social-btn bot">
+                    <i class="fa-solid fa-robot"></i> Telegram Bot
                 </a>
             </div>
         </div>
 
-        <!-- Server Monitoring -->
-        <div class="server-list">
-            <div class="server-card">
-                <div class="server-info">
-                    <span class="server-tag">PERFECT</span>
-                    <span class="server-name">#1 | PERFECT KAZAKHSTAN RPG</span>
-                    <span class="online-badge">32/100 👤</span>
-                </div>
-                <button class="connect-btn" onclick="copyIP()">
-                    <span>San Andreas</span> <i class="fa-solid fa-play"></i>
-                </button>
+        <!-- Hero Banner -->
+        <div class="hero-banner">
+            <div class="hero-content">
+                <h2>Ресми портал</h2>
+                <h1>PERFECT <span>KAZAKHSTAN</span> RPG</h1>
             </div>
         </div>
 
-        <!-- Statistics -->
-        <div class="stats-grid">
-            <div class="stat-card">
-                <div class="stat-value">1514</div>
-                <div class="stat-label">Барлық тіркелулер</div>
+        <!-- IP Monitoring -->
+        <div class="server-card">
+            <div class="server-info">
+                <span class="server-tag">PERFECT</span>
+                <span class="server-name">#1 | PERFECT KAZAKHSTAN RPG</span>
             </div>
-            <div class="stat-card">
-                <div class="stat-value">430</div>
-                <div class="stat-label">Күндік онлайн</div>
+            <button class="connect-btn" onclick="copyIP()">
+                <i class="fa-solid fa-copy"></i> IP Көшіру
+            </button>
+        </div>
+
+        <!-- MTA & Server Resources -->
+        <div class="section-title">
+            <i class="fa-solid fa-cubes" style="color: #00a2ff;"></i> Барлығына керек заттар
+        </div>
+        <div class="useful-grid">
+            <div class="useful-card">
+                <i class="fa-solid fa-download"></i>
+                <h4>MTA Жүктеу</h4>
+                <p>Ойынды іске қосу үшін ресми Multi Theft Auto клиентін жүктеп алыңыз.</p>
+                <a href="https://multitheftauto.com" target="_blank" class="useful-btn">Жүктеу сайты</a>
             </div>
-            <div class="stat-card">
-                <div class="stat-value">83</div>
-                <div class="stat-label">Админдер</div>
+            <div class="useful-card">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <h4>Товар сатып алу</h4>
+                <p>Perfect RPG серверінде VIP, машиналар және арнайы ресурстар сатып алу.</p>
+                <a href="https://t.me/PerfectRPG_bot" target="_blank" class="useful-btn">Сатып алу боты</a>
             </div>
-            <div class="stat-card active-vip">
-                <div class="stat-value">86 👑</div>
-                <div class="stat-label">VIP Ойыншылар</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-value">200</div>
-                <div class="stat-label">Бан алғандар</div>
+            <div class="useful-card">
+                <i class="fa-solid fa-book"></i>
+                <h4>Сервер Ережелері</h4>
+                <p>Серверде жайлы және қауіпсіз ойын үшін негізгі RP ережелерімен танысыңыз.</p>
+                <a href="https://t.me/+8u15Xui4Va4wZjJi" target="_blank" class="useful-btn">Ережелерді оқу</a>
             </div>
         </div>
 
-        <!-- Our Team -->
+        <!-- Management Team -->
         <div class="section-header">
-            <h3><i class="fa-solid fa-users" style="color: #00a2ff;"></i> Біздің команда</h3>
+            <div class="section-title" style="margin-bottom:0;">
+                <i class="fa-solid fa-user-shield" style="color: #00a2ff;"></i> Басшылықтар
+            </div>
+            <button class="filter-btn active">Барлық басшылық</button>
         </div>
 
         <div class="team-grid">
             <div class="team-card">
                 <img src="https://api.dicebear.com/7.x/bottts/svg?seed=BAURIGO" class="avatar" alt="Avatar">
                 <div class="member-name">BAURIGO</div>
-                <div class="member-role">ВЛАДЕЛЕЦ</div>
-                <button class="profile-btn">Профиль</button>
+                <div class="member-role">Владелец</div>
             </div>
             <div class="team-card">
                 <img src="https://api.dicebear.com/7.x/bottts/svg?seed=Sake" class="avatar" alt="Avatar">
                 <div class="member-name">Sake</div>
-                <div class="member-role">ВЛАДЕЛЕЦ</div>
-                <button class="profile-btn">Профиль</button>
+                <div class="member-role">Владелец</div>
             </div>
             <div class="team-card">
                 <img src="https://api.dicebear.com/7.x/bottts/svg?seed=Richard" class="avatar" alt="Avatar">
                 <div class="member-name">Richard</div>
-                <div class="member-role">РУКОВОДСТВО</div>
-                <button class="profile-btn">Профиль</button>
+                <div class="member-role">Руководство</div>
             </div>
             <div class="team-card">
                 <img src="https://api.dicebear.com/7.x/bottts/svg?seed=10bagaNN" class="avatar" alt="Avatar">
                 <div class="member-name">10bagaNN</div>
-                <div class="member-role">МЕДИА КУРАТОР</div>
-                <button class="profile-btn">Профиль</button>
+                <div class="member-role">Медиа Куратор</div>
+            </div>
+            <div class="team-card">
+                <img src="https://api.dicebear.com/7.x/bottts/svg?seed=vNET" class="avatar" alt="Avatar">
+                <div class="member-name">vNET</div>
+                <div class="member-role">Медиа Куратор</div>
+            </div>
+            <div class="team-card">
+                <img src="https://api.dicebear.com/7.x/bottts/svg?seed=Vacant" class="avatar" alt="Avatar">
+                <div class="member-name vacant">Бос</div>
+                <div class="member-role">Главный смотрящий</div>
             </div>
             <div class="team-card">
                 <img src="https://api.dicebear.com/7.x/bottts/svg?seed=Nazarbaevv" class="avatar" alt="Avatar">
                 <div class="member-name">Nazarbaevv_</div>
-                <div class="member-role">СТАРШИЙ СМОТРЯЩИЙ</div>
-                <button class="profile-btn">Профиль</button>
+                <div class="member-role">Старший смотрящий</div>
+            </div>
+            <div class="team-card">
+                <img src="https://api.dicebear.com/7.x/bottts/svg?seed=ARSEN4IK" class="avatar" alt="Avatar">
+                <div class="member-name">ARSEN4IK</div>
+                <div class="member-role">Смотрящий</div>
+            </div>
+            <div class="team-card">
+                <img src="https://api.dicebear.com/7.x/bottts/svg?seed=KETO" class="avatar" alt="Avatar">
+                <div class="member-name">KETO</div>
+                <div class="member-role">Смотрящий</div>
+            </div>
+            <div class="team-card">
+                <img src="https://api.dicebear.com/7.x/bottts/svg?seed=mad1kosh" class="avatar" alt="Avatar">
+                <div class="member-name">mad1kosh</div>
+                <div class="member-role">Смотрящий</div>
             </div>
         </div>
     </div>
 
     <script>
-        // IP Көшіру
         function copyIP() {
             const ip = "mtasa://87.228.5.7:22003";
             navigator.clipboard.writeText(ip);
-            alert("Сервер IP мекенжайы көшірілді: " + ip);
+            alert("IP көшірілді: " + ip);
         }
 
-        // Ағатын көк жұлдыздар анимациясы
+        // Жоғарыдан төмен қарай ағатын жай, көп жұлдыздар
         const canvas = document.getElementById('starfield');
         const ctx = canvas.getContext('2d');
 
@@ -455,15 +456,15 @@
         window.addEventListener('resize', resizeCanvas);
 
         const stars = [];
-        const numStars = 150; // Жұлдыздар саны
+        const numStars = 250; // Көп жұлдыз
 
         for (let i = 0; i < numStars; i++) {
             stars.push({
                 x: Math.random() * canvas.width,
                 y: Math.random() * canvas.height,
-                length: Math.random() * 80 + 20, // Жұлдыз құйрығының ұзындығы
-                speed: Math.random() * 4 + 2,    // Ағу жылдамдығы
-                size: Math.random() * 1.5 + 0.5,
+                length: Math.random() * 25 + 10,
+                speed: Math.random() * 1.2 + 0.3, // Жай құлау жылдамдығы
+                size: Math.random() * 1.8 + 0.5,
                 opacity: Math.random() * 0.8 + 0.2
             });
         }
@@ -472,10 +473,9 @@
             ctx.clearRect(0, 0, canvas.width, canvas.height);
 
             stars.forEach(star => {
-                // Градиент құйрық
                 let gradient = ctx.createLinearGradient(
                     star.x, star.y, 
-                    star.x - star.length, star.y + star.length
+                    star.x, star.y - star.length
                 );
                 gradient.addColorStop(0, `rgba(0, 225, 255, ${star.opacity})`);
                 gradient.addColorStop(1, 'rgba(0, 162, 255, 0)');
@@ -484,17 +484,16 @@
                 ctx.lineWidth = star.size;
                 ctx.beginPath();
                 ctx.moveTo(star.x, star.y);
-                ctx.lineTo(star.x - star.length, star.y + star.length);
+                ctx.lineTo(star.x, star.y - star.length);
                 ctx.stroke();
 
-                // Жылжыту (он жақ жоғарыдан сол жақ төменге ағады)
-                star.x -= star.speed;
+                // Жоғарыдан төмен ағу
                 star.y += star.speed;
 
-                // Экраннан шығып кетсе қайтадан төбеге қайтару
-                if (star.x < -star.length || star.y > canvas.height + star.length) {
-                    star.x = Math.random() * (canvas.width + canvas.height);
+                // Төменге жеткенде қайта төбеден бастау
+                if (star.y > canvas.height + star.length) {
                     star.y = -star.length;
+                    star.x = Math.random() * canvas.width;
                 }
             });
 
