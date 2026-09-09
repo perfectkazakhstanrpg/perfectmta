@@ -41,6 +41,7 @@
             z-index: 1;
         }
 
+        /* Top Bar */
         .top-bar {
             display: flex;
             justify-content: space-between;
@@ -84,15 +85,11 @@
             transition: 0.3s;
         }
 
-        .social-btn.telegram { border-color: rgba(0, 136, 204, 0.5); }
         .social-btn.telegram:hover { background: #0088cc; box-shadow: 0 0 15px rgba(0, 136, 204, 0.6); }
-
-        .social-btn.discord { border-color: rgba(88, 101, 242, 0.5); }
         .social-btn.discord:hover { background: #5865F2; box-shadow: 0 0 15px rgba(88, 101, 242, 0.6); }
-
-        .social-btn.bot { border-color: rgba(0, 225, 255, 0.5); }
         .social-btn.bot:hover { background: #00e1ff; color: #000; box-shadow: 0 0 15px rgba(0, 225, 255, 0.6); }
 
+        /* Hero Banner */
         .hero-banner {
             background: linear-gradient(90deg, rgba(2,10,25,0.95) 0%, rgba(5,20,50,0.8) 100%), 
                         url('https://wallpapers.com/images/featured/gta-5-background-9k47t4u86m00x5v2.jpg') center/cover;
@@ -106,12 +103,7 @@
             margin-bottom: 30px;
         }
 
-        .hero-content h2 {
-            font-size: 1.1rem;
-            color: #8ab4f8;
-            font-weight: 600;
-        }
-
+        .hero-content h2 { font-size: 1.1rem; color: #8ab4f8; font-weight: 600; }
         .hero-content h1 {
             font-size: 2.8rem;
             font-weight: 900;
@@ -121,9 +113,9 @@
             color: #fff;
             text-shadow: 0 0 20px rgba(0, 162, 255, 0.6);
         }
-
         .hero-content h1 span { color: #00a2ff; }
 
+        /* IP Card */
         .server-card {
             background: rgba(10, 20, 40, 0.7);
             border: 1px solid rgba(0, 162, 255, 0.2);
@@ -136,12 +128,7 @@
             margin-bottom: 35px;
         }
 
-        .server-info {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
+        .server-info { display: flex; align-items: center; gap: 15px; }
         .server-tag {
             background: #00a2ff;
             color: #fff;
@@ -152,7 +139,6 @@
             text-transform: uppercase;
             box-shadow: 0 0 10px rgba(0, 162, 255, 0.5);
         }
-
         .server-name { font-weight: 700; font-size: 1.1rem; }
 
         .connect-btn {
@@ -168,12 +154,9 @@
             align-items: center;
             gap: 8px;
         }
+        .connect-btn:hover { background: #00a2ff; box-shadow: 0 0 15px rgba(0, 162, 255, 0.6); }
 
-        .connect-btn:hover {
-            background: #00a2ff;
-            box-shadow: 0 0 15px rgba(0, 162, 255, 0.6);
-        }
-
+        /* Section Cards */
         .section-title {
             font-size: 1.4rem;
             font-weight: 800;
@@ -199,31 +182,14 @@
             backdrop-filter: blur(10px);
             transition: 0.3s;
         }
-
         .useful-card:hover {
             border-color: #00a2ff;
             transform: translateY(-4px);
             box-shadow: 0 5px 20px rgba(0, 162, 255, 0.25);
         }
-
-        .useful-card i {
-            font-size: 2rem;
-            color: #00a2ff;
-            margin-bottom: 12px;
-        }
-
-        .useful-card h4 {
-            font-size: 1.1rem;
-            font-weight: 700;
-            margin-bottom: 8px;
-        }
-
-        .useful-card p {
-            font-size: 0.85rem;
-            color: #8ab4f8;
-            line-height: 1.4;
-            margin-bottom: 15px;
-        }
+        .useful-card i { font-size: 2rem; color: #00a2ff; margin-bottom: 12px; }
+        .useful-card h4 { font-size: 1.1rem; font-weight: 700; margin-bottom: 8px; }
+        .useful-card p { font-size: 0.85rem; color: #8ab4f8; line-height: 1.4; margin-bottom: 15px; }
 
         .useful-btn {
             display: inline-block;
@@ -237,11 +203,9 @@
             text-decoration: none;
             transition: 0.3s;
         }
+        .useful-btn:hover { background: #00a2ff; }
 
-        .useful-btn:hover {
-            background: #00a2ff;
-        }
-
+        /* Management Section */
         .section-header {
             display: flex;
             justify-content: space-between;
@@ -255,18 +219,20 @@
             background: rgba(0, 162, 255, 0.15);
             border: 1px solid rgba(0, 162, 255, 0.4);
             color: #00a2ff;
-            padding: 8px 16px;
+            padding: 10px 20px;
             border-radius: 20px;
             font-size: 0.85rem;
             font-weight: 700;
             cursor: pointer;
             transition: 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
         }
-
-        .filter-btn:hover, .filter-btn.active {
+        .filter-btn:hover {
             background: #00a2ff;
             color: #fff;
-            box-shadow: 0 0 12px rgba(0, 162, 255, 0.5);
+            box-shadow: 0 0 15px rgba(0, 162, 255, 0.6);
         }
 
         .team-grid {
@@ -284,27 +250,100 @@
             transition: 0.3s;
             backdrop-filter: blur(10px);
         }
-
         .team-card:hover {
             transform: translateY(-5px);
             border-color: #00a2ff;
             box-shadow: 0 5px 20px rgba(0, 162, 255, 0.3);
         }
 
-        .avatar {
-            width: 75px;
-            height: 75px;
+        /* Силуэт адам аватары */
+        .avatar-box {
+            width: 80px;
+            height: 80px;
             border-radius: 50%;
             margin: 0 auto 12px auto;
             border: 2px solid #00a2ff;
-            padding: 3px;
-            object-fit: cover;
+            background: rgba(0, 162, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
             box-shadow: 0 0 12px rgba(0, 162, 255, 0.4);
+            overflow: hidden;
+        }
+
+        .avatar-box i {
+            font-size: 3rem;
+            color: #1a2238;
         }
 
         .member-name { font-weight: 800; font-size: 1.1rem; margin-bottom: 4px; }
         .member-role { font-size: 0.75rem; color: #00a2ff; font-weight: 700; text-transform: uppercase; }
         .vacant { color: #888; font-style: italic; }
+
+        /* Modal Panel (Барлық басшылық) */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(2, 5, 14, 0.85);
+            backdrop-filter: blur(8px);
+            z-index: 100;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            padding: 20px;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-content {
+            background: #081026;
+            border: 1px solid rgba(0, 162, 255, 0.4);
+            border-radius: 16px;
+            width: 100%;
+            max-width: 900px;
+            max-height: 85vh;
+            overflow-y: auto;
+            padding: 30px;
+            box-shadow: 0 0 40px rgba(0, 162, 255, 0.3);
+            position: relative;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(0, 162, 255, 0.2);
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+
+        .modal-header h3 {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .close-btn {
+            background: transparent;
+            border: none;
+            color: #8ab4f8;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        .close-btn:hover { color: #00a2ff; }
     </style>
 </head>
 <body>
@@ -312,7 +351,7 @@
     <canvas id="starfield"></canvas>
 
     <div class="container">
-        <!-- Social & Bot Navigation -->
+        <!-- Top Bar -->
         <div class="top-bar">
             <div class="brand">
                 <i class="fa-solid fa-gamepad" style="color: #00a2ff;"></i>
@@ -331,7 +370,7 @@
             </div>
         </div>
 
-        <!-- Hero Banner -->
+        <!-- Banner -->
         <div class="hero-banner">
             <div class="hero-content">
                 <h2>Ресми портал</h2>
@@ -350,7 +389,7 @@
             </button>
         </div>
 
-        <!-- MTA & Server Resources -->
+        <!-- Useful Links -->
         <div class="section-title">
             <i class="fa-solid fa-cubes" style="color: #00a2ff;"></i> Барлығына керек заттар
         </div>
@@ -375,64 +414,104 @@
             </div>
         </div>
 
-        <!-- Management Team -->
+        <!-- Main Management Section -->
         <div class="section-header">
             <div class="section-title" style="margin-bottom:0;">
                 <i class="fa-solid fa-user-shield" style="color: #00a2ff;"></i> Басшылықтар
             </div>
-            <button class="filter-btn active">Барлық басшылық</button>
+            <button class="filter-btn" onclick="toggleModal(true)">
+                <i class="fa-solid fa-users"></i> Барлық басшылық
+            </button>
         </div>
 
+        <!-- Басты бетке тек: Владелец, Руководство, Главный смотрящий, Старший смотрящий -->
         <div class="team-grid">
             <div class="team-card">
-                <img src="https://api.dicebear.com/7.x/bottts/svg?seed=BAURIGO" class="avatar" alt="Avatar">
+                <div class="avatar-box"><i class="fa-solid fa-user-tie"></i></div>
                 <div class="member-name">BAURIGO</div>
                 <div class="member-role">Владелец</div>
             </div>
             <div class="team-card">
-                <img src="https://api.dicebear.com/7.x/bottts/svg?seed=Sake" class="avatar" alt="Avatar">
+                <div class="avatar-box"><i class="fa-solid fa-user-tie"></i></div>
                 <div class="member-name">Sake</div>
                 <div class="member-role">Владелец</div>
             </div>
             <div class="team-card">
-                <img src="https://api.dicebear.com/7.x/bottts/svg?seed=Richard" class="avatar" alt="Avatar">
+                <div class="avatar-box"><i class="fa-solid fa-user-shield"></i></div>
                 <div class="member-name">Richard</div>
                 <div class="member-role">Руководство</div>
             </div>
             <div class="team-card">
-                <img src="https://api.dicebear.com/7.x/bottts/svg?seed=10bagaNN" class="avatar" alt="Avatar">
-                <div class="member-name">10bagaNN</div>
-                <div class="member-role">Медиа Куратор</div>
-            </div>
-            <div class="team-card">
-                <img src="https://api.dicebear.com/7.x/bottts/svg?seed=vNET" class="avatar" alt="Avatar">
-                <div class="member-name">vNET</div>
-                <div class="member-role">Медиа Куратор</div>
-            </div>
-            <div class="team-card">
-                <img src="https://api.dicebear.com/7.x/bottts/svg?seed=Vacant" class="avatar" alt="Avatar">
+                <div class="avatar-box"><i class="fa-solid fa-user"></i></div>
                 <div class="member-name vacant">Бос</div>
                 <div class="member-role">Главный смотрящий</div>
             </div>
             <div class="team-card">
-                <img src="https://api.dicebear.com/7.x/bottts/svg?seed=Nazarbaevv" class="avatar" alt="Avatar">
+                <div class="avatar-box"><i class="fa-solid fa-user"></i></div>
                 <div class="member-name">Nazarbaevv_</div>
                 <div class="member-role">Старший смотрящий</div>
             </div>
-            <div class="team-card">
-                <img src="https://api.dicebear.com/7.x/bottts/svg?seed=ARSEN4IK" class="avatar" alt="Avatar">
-                <div class="member-name">ARSEN4IK</div>
-                <div class="member-role">Смотрящий</div>
+        </div>
+    </div>
+
+    <!-- Modal Panel (Барлық басшылықтар толық тізімі) -->
+    <div class="modal-overlay" id="teamModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fa-solid fa-users-gear" style="color: #00a2ff;"></i> Барлық Басшылық Құрамы</h3>
+                <button class="close-btn" onclick="toggleModal(false)"><i class="fa-solid fa-xmark"></i></button>
             </div>
-            <div class="team-card">
-                <img src="https://api.dicebear.com/7.x/bottts/svg?seed=KETO" class="avatar" alt="Avatar">
-                <div class="member-name">KETO</div>
-                <div class="member-role">Смотрящий</div>
-            </div>
-            <div class="team-card">
-                <img src="https://api.dicebear.com/7.x/bottts/svg?seed=mad1kosh" class="avatar" alt="Avatar">
-                <div class="member-name">mad1kosh</div>
-                <div class="member-role">Смотрящий</div>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="avatar-box"><i class="fa-solid fa-user-tie"></i></div>
+                    <div class="member-name">BAURIGO</div>
+                    <div class="member-role">Владелец</div>
+                </div>
+                <div class="team-card">
+                    <div class="avatar-box"><i class="fa-solid fa-user-tie"></i></div>
+                    <div class="member-name">Sake</div>
+                    <div class="member-role">Владелец</div>
+                </div>
+                <div class="team-card">
+                    <div class="avatar-box"><i class="fa-solid fa-user-shield"></i></div>
+                    <div class="member-name">Richard</div>
+                    <div class="member-role">Руководство</div>
+                </div>
+                <div class="team-card">
+                    <div class="avatar-box"><i class="fa-solid fa-user"></i></div>
+                    <div class="member-name">10bagaNN</div>
+                    <div class="member-role">Медиа Куратор</div>
+                </div>
+                <div class="team-card">
+                    <div class="avatar-box"><i class="fa-solid fa-user"></i></div>
+                    <div class="member-name">vNET</div>
+                    <div class="member-role">Медиа Куратор</div>
+                </div>
+                <div class="team-card">
+                    <div class="avatar-box"><i class="fa-solid fa-user"></i></div>
+                    <div class="member-name vacant">Бос</div>
+                    <div class="member-role">Главный смотрящий</div>
+                </div>
+                <div class="team-card">
+                    <div class="avatar-box"><i class="fa-solid fa-user"></i></div>
+                    <div class="member-name">Nazarbaevv_</div>
+                    <div class="member-role">Старший смотрящий</div>
+                </div>
+                <div class="team-card">
+                    <div class="avatar-box"><i class="fa-solid fa-user"></i></div>
+                    <div class="member-name">ARSEN4IK</div>
+                    <div class="member-role">Смотрящий</div>
+                </div>
+                <div class="team-card">
+                    <div class="avatar-box"><i class="fa-solid fa-user"></i></div>
+                    <div class="member-name">KETO</div>
+                    <div class="member-role">Смотрящий</div>
+                </div>
+                <div class="team-card">
+                    <div class="avatar-box"><i class="fa-solid fa-user"></i></div>
+                    <div class="member-name">mad1kosh</div>
+                    <div class="member-role">Смотрящий</div>
+                </div>
             </div>
         </div>
     </div>
@@ -444,7 +523,17 @@
             alert("IP көшірілді: " + ip);
         }
 
-        // Жоғарыдан төмен қарай ағатын жай, көп жұлдыздар
+        // Панельді ашу/жабу функциясы
+        function toggleModal(show) {
+            const modal = document.getElementById('teamModal');
+            if (show) {
+                modal.classList.add('active');
+            } else {
+                modal.classList.remove('active');
+            }
+        }
+
+        // Жоғарыдан төмен қарай ағатын жай жұлдыздар
         const canvas = document.getElementById('starfield');
         const ctx = canvas.getContext('2d');
 
@@ -456,14 +545,14 @@
         window.addEventListener('resize', resizeCanvas);
 
         const stars = [];
-        const numStars = 250; // Көп жұлдыз
+        const numStars = 250;
 
         for (let i = 0; i < numStars; i++) {
             stars.push({
                 x: Math.random() * canvas.width,
                 y: Math.random() * canvas.height,
                 length: Math.random() * 25 + 10,
-                speed: Math.random() * 1.2 + 0.3, // Жай құлау жылдамдығы
+                speed: Math.random() * 1.2 + 0.3,
                 size: Math.random() * 1.8 + 0.5,
                 opacity: Math.random() * 0.8 + 0.2
             });
@@ -487,10 +576,8 @@
                 ctx.lineTo(star.x, star.y - star.length);
                 ctx.stroke();
 
-                // Жоғарыдан төмен ағу
                 star.y += star.speed;
 
-                // Төменге жеткенде қайта төбеден бастау
                 if (star.y > canvas.height + star.length) {
                     star.y = -star.length;
                     star.x = Math.random() * canvas.width;
