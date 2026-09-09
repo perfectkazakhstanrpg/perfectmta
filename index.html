@@ -15,17 +15,31 @@
         }
 
         body {
-            background-color: #08080a;
-            background-image: radial-gradient(circle at center, #180505 0%, #050507 100%);
+            background-color: #030712;
             color: #ffffff;
             min-height: 100vh;
             padding-bottom: 50px;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Canvas фон (Ағатын жұлдыздар) */
+        #starfield {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: radial-gradient(circle at center, #071530 0%, #02050e 100%);
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
+            position: relative;
+            z-index: 1;
         }
 
         /* Top Navigation Bar */
@@ -34,7 +48,7 @@
             justify-content: space-between;
             align-items: center;
             padding: 15px 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            border-bottom: 1px solid rgba(0, 162, 255, 0.15);
             margin-bottom: 20px;
         }
 
@@ -48,8 +62,8 @@
         }
 
         .discord-btn {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(0, 162, 255, 0.1);
+            border: 1px solid rgba(0, 162, 255, 0.3);
             color: #fff;
             padding: 8px 16px;
             border-radius: 8px;
@@ -63,21 +77,21 @@
         }
 
         .discord-btn:hover {
-            background: #5865F2;
-            border-color: #5865F2;
+            background: #00a2ff;
+            box-shadow: 0 0 15px rgba(0, 162, 255, 0.6);
         }
 
         /* Main Hero Banner */
         .hero-banner {
-            background: linear-gradient(90deg, rgba(15,0,0,0.9) 0%, rgba(30,5,5,0.7) 100%), 
+            background: linear-gradient(90deg, rgba(2,10,25,0.95) 0%, rgba(5,20,50,0.8) 100%), 
                         url('https://wallpapers.com/images/featured/gta-5-background-9k47t4u86m00x5v2.jpg') center/cover;
             border-radius: 16px;
             padding: 40px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border: 1px solid rgba(255, 0, 0, 0.2);
-            box-shadow: 0 0 30px rgba(255, 0, 0, 0.1);
+            border: 1px solid rgba(0, 162, 255, 0.3);
+            box-shadow: 0 0 30px rgba(0, 162, 255, 0.2);
             margin-bottom: 25px;
             position: relative;
             overflow: hidden;
@@ -85,7 +99,7 @@
 
         .hero-content h2 {
             font-size: 1.2rem;
-            color: #aaa;
+            color: #8ab4f8;
             font-weight: 600;
         }
 
@@ -96,15 +110,15 @@
             text-transform: uppercase;
             margin: 5px 0 15px 0;
             color: #fff;
-            text-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+            text-shadow: 0 0 20px rgba(0, 162, 255, 0.6);
         }
 
         .hero-content h1 span {
-            color: #e50914;
+            color: #00a2ff;
         }
 
         .action-btn {
-            background: #e50914;
+            background: #00a2ff;
             color: #fff;
             padding: 12px 24px;
             border-radius: 8px;
@@ -113,13 +127,13 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            box-shadow: 0 4px 15px rgba(229, 9, 20, 0.4);
+            box-shadow: 0 4px 15px rgba(0, 162, 255, 0.4);
             transition: 0.3s;
         }
 
         .action-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(229, 9, 20, 0.6);
+            box-shadow: 0 6px 20px rgba(0, 162, 255, 0.7);
         }
 
         /* Server List / Monitoring */
@@ -131,8 +145,8 @@
         }
 
         .server-card {
-            background: rgba(18, 18, 22, 0.8);
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            background: rgba(10, 20, 40, 0.7);
+            border: 1px solid rgba(0, 162, 255, 0.2);
             border-radius: 12px;
             padding: 15px 25px;
             display: flex;
@@ -148,13 +162,14 @@
         }
 
         .server-tag {
-            background: #e50914;
+            background: #00a2ff;
             color: #fff;
             font-size: 0.75rem;
             font-weight: 800;
             padding: 4px 10px;
             border-radius: 6px;
             text-transform: uppercase;
+            box-shadow: 0 0 10px rgba(0, 162, 255, 0.5);
         }
 
         .server-name {
@@ -167,26 +182,27 @@
             padding: 5px 12px;
             border-radius: 20px;
             font-size: 0.85rem;
-            color: #aaa;
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            color: #8ab4f8;
+            border: 1px solid rgba(0, 162, 255, 0.2);
         }
 
         .connect-btn {
-            background: rgba(255, 255, 255, 0.08);
+            background: rgba(0, 162, 255, 0.15);
             color: #fff;
-            border: none;
+            border: 1px solid rgba(0, 162, 255, 0.4);
             padding: 8px 16px;
             border-radius: 8px;
             cursor: pointer;
             font-weight: 600;
-            transition: 0.2s;
+            transition: 0.3s;
             display: flex;
             align-items: center;
             gap: 8px;
         }
 
         .connect-btn:hover {
-            background: #e50914;
+            background: #00a2ff;
+            box-shadow: 0 0 15px rgba(0, 162, 255, 0.6);
         }
 
         /* Stats Bar */
@@ -198,12 +214,12 @@
         }
 
         .stat-card {
-            background: rgba(18, 18, 22, 0.8);
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            background: rgba(10, 20, 40, 0.7);
+            border: 1px solid rgba(0, 162, 255, 0.2);
             border-radius: 12px;
             padding: 20px;
             text-align: center;
-            position: relative;
+            backdrop-filter: blur(10px);
         }
 
         .stat-card.active-vip {
@@ -214,17 +230,19 @@
         .stat-value {
             font-size: 1.8rem;
             font-weight: 900;
-            color: #e50914;
+            color: #00a2ff;
             margin-bottom: 5px;
+            text-shadow: 0 0 10px rgba(0, 162, 255, 0.5);
         }
 
         .stat-card.active-vip .stat-value {
             color: #ffb700;
+            text-shadow: 0 0 10px rgba(255, 183, 0, 0.5);
         }
 
         .stat-label {
             font-size: 0.8rem;
-            color: #888;
+            color: #8ab4f8;
             font-weight: 600;
             text-transform: uppercase;
         }
@@ -252,18 +270,19 @@
         }
 
         .team-card {
-            background: rgba(18, 18, 22, 0.8);
-            border: 1px solid rgba(255, 0, 0, 0.15);
+            background: rgba(10, 20, 40, 0.7);
+            border: 1px solid rgba(0, 162, 255, 0.2);
             border-radius: 12px;
             padding: 25px 15px;
             text-align: center;
             transition: 0.3s;
+            backdrop-filter: blur(10px);
         }
 
         .team-card:hover {
             transform: translateY(-5px);
-            border-color: #e50914;
-            box-shadow: 0 5px 20px rgba(229, 9, 20, 0.2);
+            border-color: #00a2ff;
+            box-shadow: 0 5px 20px rgba(0, 162, 255, 0.3);
         }
 
         .avatar {
@@ -271,9 +290,10 @@
             height: 70px;
             border-radius: 50%;
             margin: 0 auto 15px auto;
-            border: 2px solid #e50914;
+            border: 2px solid #00a2ff;
             padding: 3px;
             object-fit: cover;
+            box-shadow: 0 0 10px rgba(0, 162, 255, 0.4);
         }
 
         .member-name {
@@ -284,7 +304,7 @@
 
         .member-role {
             font-size: 0.75rem;
-            color: #e50914;
+            color: #00a2ff;
             font-weight: 700;
             text-transform: uppercase;
             margin-bottom: 15px;
@@ -304,18 +324,22 @@
         }
 
         .profile-btn:hover {
-            background: #fff;
-            color: #000;
+            background: #00a2ff;
+            color: #fff;
+            border-color: #00a2ff;
         }
     </style>
 </head>
 <body>
 
+    <!-- Фондағы жұлдыздар -->
+    <canvas id="starfield"></canvas>
+
     <div class="container">
         <!-- Header -->
         <div class="top-bar">
             <div class="brand">
-                <i class="fa-solid fa-gamepad" style="color: #e50914;"></i>
+                <i class="fa-solid fa-gamepad" style="color: #00a2ff;"></i>
                 <span>PERFECT PROJECT</span>
             </div>
             <a href="https://t.me/PerfectRPG_bot" target="_blank" class="discord-btn">
@@ -329,7 +353,7 @@
                 <h2>Біздің Телеграм Бот</h2>
                 <h1>PERFECT <span>KAZAKHSTAN</span></h1>
                 <a href="https://t.me/PerfectRPG_bot" target="_blank" class="action-btn">
-                    <i class="fa-solid fa-arrow-right-to-bracket"></i> Боталған өту
+                    <i class="fa-solid fa-arrow-right-to-bracket"></i> Ботқа өту
                 </a>
             </div>
         </div>
@@ -374,7 +398,7 @@
 
         <!-- Our Team -->
         <div class="section-header">
-            <h3><i class="fa-solid fa-users" style="color: #e50914;"></i> Біздің команда</h3>
+            <h3><i class="fa-solid fa-users" style="color: #00a2ff;"></i> Біздің команда</h3>
         </div>
 
         <div class="team-grid">
@@ -412,11 +436,72 @@
     </div>
 
     <script>
+        // IP Көшіру
         function copyIP() {
             const ip = "mtasa://87.228.5.7:22003";
             navigator.clipboard.writeText(ip);
             alert("Сервер IP мекенжайы көшірілді: " + ip);
         }
+
+        // Ағатын көк жұлдыздар анимациясы
+        const canvas = document.getElementById('starfield');
+        const ctx = canvas.getContext('2d');
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        resizeCanvas();
+        window.addEventListener('resize', resizeCanvas);
+
+        const stars = [];
+        const numStars = 150; // Жұлдыздар саны
+
+        for (let i = 0; i < numStars; i++) {
+            stars.push({
+                x: Math.random() * canvas.width,
+                y: Math.random() * canvas.height,
+                length: Math.random() * 80 + 20, // Жұлдыз құйрығының ұзындығы
+                speed: Math.random() * 4 + 2,    // Ағу жылдамдығы
+                size: Math.random() * 1.5 + 0.5,
+                opacity: Math.random() * 0.8 + 0.2
+            });
+        }
+
+        function drawStars() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            stars.forEach(star => {
+                // Градиент құйрық
+                let gradient = ctx.createLinearGradient(
+                    star.x, star.y, 
+                    star.x - star.length, star.y + star.length
+                );
+                gradient.addColorStop(0, `rgba(0, 225, 255, ${star.opacity})`);
+                gradient.addColorStop(1, 'rgba(0, 162, 255, 0)');
+
+                ctx.strokeStyle = gradient;
+                ctx.lineWidth = star.size;
+                ctx.beginPath();
+                ctx.moveTo(star.x, star.y);
+                ctx.lineTo(star.x - star.length, star.y + star.length);
+                ctx.stroke();
+
+                // Жылжыту (он жақ жоғарыдан сол жақ төменге ағады)
+                star.x -= star.speed;
+                star.y += star.speed;
+
+                // Экраннан шығып кетсе қайтадан төбеге қайтару
+                if (star.x < -star.length || star.y > canvas.height + star.length) {
+                    star.x = Math.random() * (canvas.width + canvas.height);
+                    star.y = -star.length;
+                }
+            });
+
+            requestAnimationFrame(drawStars);
+        }
+
+        drawStars();
     </script>
 </body>
 </html>
