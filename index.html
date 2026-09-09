@@ -4,25 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PERFECT KAZAKHSTAN | RPG</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800;900&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Montserrat', sans-serif;
         }
 
         body {
-            background: linear-gradient(rgba(10, 10, 15, 0.85), rgba(10, 10, 15, 0.90)), 
-                        url('https://wallpapers.com/images/featured/gta-5-background-9k47t4u86m00x5v2.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
+            background: #08090d;
+            background-image: 
+                radial-gradient(at 10% 10%, rgba(255, 107, 0, 0.15) 0px, transparent 50%),
+                radial-gradient(at 90% 90%, rgba(138, 43, 226, 0.15) 0px, transparent 50%);
             color: #ffffff;
+            font-family: 'Rajdhani', sans-serif;
             min-height: 100vh;
-            padding: 40px 20px;
+            padding: 50px 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -30,268 +28,270 @@
 
         .header {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 50px;
         }
 
         .header h1 {
-            font-size: 2.8rem;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3rem;
             font-weight: 900;
-            letter-spacing: 2px;
-            background: linear-gradient(45deg, #ff6b00, #ff8800, #ffae00);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-transform: uppercase;
-            text-shadow: 0 10px 20px rgba(255, 107, 0, 0.3);
+            letter-spacing: 3px;
+            color: #fff;
+            text-shadow: 0 0 20px rgba(255, 107, 0, 0.6);
             margin-bottom: 10px;
         }
 
+        .header h1 span {
+            color: #ff6b00;
+        }
+
         .header p {
-            color: #a0a5b5;
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 25px;
+            color: #94a3b8;
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+            margin-bottom: 30px;
         }
 
         .btn-group {
             display: flex;
-            gap: 15px;
+            gap: 20px;
             justify-content: center;
-            flex-wrap: wrap;
         }
 
         .btn {
-            padding: 12px 28px;
-            border-radius: 10px;
+            font-family: 'Orbitron', sans-serif;
+            padding: 14px 32px;
+            border-radius: 8px;
             font-weight: 700;
+            font-size: 0.9rem;
             text-decoration: none;
             color: #fff;
-            background: linear-gradient(135deg, #0088cc, #005580);
-            box-shadow: 0 4px 15px rgba(0, 136, 204, 0.4);
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
             transition: all 0.3s ease;
-        }
-
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(0, 136, 204, 0.6);
-        }
-
-        .btn-bot {
-            background: linear-gradient(135deg, #ff6b00, #cc5500);
-            box-shadow: 0 4px 15px rgba(255, 107, 0, 0.4);
-        }
-
-        .btn-bot:hover {
-            box-shadow: 0 6px 20px rgba(255, 107, 0, 0.6);
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2rem;
-            font-weight: 800;
-            margin: 40px 0 25px 0;
-            position: relative;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
 
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 4px;
-            background: #ff6b00;
-            margin: 8px auto 0 auto;
-            border-radius: 2px;
-            box-shadow: 0 0 10px #ff6b00;
+        .btn:hover {
+            border-color: #00f2fe;
+            box-shadow: 0 0 20px rgba(0, 242, 254, 0.4);
+            transform: translateY(-3px);
+        }
+
+        .btn-bot {
+            border-color: rgba(255, 107, 0, 0.4);
+        }
+
+        .btn-bot:hover {
+            border-color: #ff6b00;
+            box-shadow: 0 0 20px rgba(255, 107, 0, 0.5);
+        }
+
+        .section-title {
+            font-family: 'Orbitron', sans-serif;
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin: 40px 0 30px 0;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #fff;
         }
 
         .grid-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 20px;
             width: 100%;
-            max-width: 1100px;
-            margin-bottom: 30px;
+            max-width: 1200px;
         }
 
         .card {
-            background: rgba(20, 22, 32, 0.75);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 16px;
-            padding: 20px;
-            text-align: center;
-            transition: all 0.3s ease;
+            background: rgba(15, 17, 26, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 22px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             position: relative;
-            overflow: hidden;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(12px);
         }
 
         .card:hover {
             transform: translateY(-5px);
-            border-color: rgba(255, 107, 0, 0.5);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+            background: rgba(22, 25, 38, 0.85);
         }
 
-        .role {
-            font-size: 0.85rem;
+        .badge {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.75rem;
             font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin-bottom: 12px;
             text-transform: uppercase;
             letter-spacing: 1px;
-            margin-bottom: 10px;
-            color: #8a8f9e;
         }
 
         .nickname {
-            font-size: 1.3rem;
-            font-weight: 800;
+            font-size: 1.4rem;
+            font-weight: 700;
+            letter-spacing: 1px;
         }
 
-        /* Түстік белгілер мен неон эффекттері */
-        .card.owner { border-left: 4px solid #ff3366; }
-        .card.owner .role { color: #ff3366; }
-        .card.owner .nickname { color: #ffffff; text-shadow: 0 0 10px rgba(255, 51, 102, 0.5); }
+        /* Түстер Мен Неон Эффекттер */
+        .card.owner { border-bottom: 2px solid #ff0055; }
+        .card.owner .badge { background: rgba(255, 0, 85, 0.15); color: #ff0055; border: 1px solid rgba(255, 0, 85, 0.3); }
+        .card.owner .nickname { color: #fff; text-shadow: 0 0 10px rgba(255, 0, 85, 0.5); }
 
-        .card.head { border-left: 4px solid #ffcc00; }
-        .card.head .role { color: #ffcc00; }
+        .card.head { border-bottom: 2px solid #ffb700; }
+        .card.head .badge { background: rgba(255, 183, 0, 0.15); color: #ffb700; border: 1px solid rgba(255, 183, 0, 0.3); }
 
-        .card.media { border-left: 4px solid #a855f7; }
-        .card.media .role { color: #a855f7; }
+        .card.media { border-bottom: 2px solid #a855f7; }
+        .card.media .badge { background: rgba(168, 85, 247, 0.15); color: #a855f7; border: 1px solid rgba(168, 85, 247, 0.3); }
 
-        .card.main-watch { border-left: 4px solid #00f2fe; }
-        .card.main-watch .role { color: #00f2fe; }
-        .card.main-watch .nickname.empty { color: #6c757d; font-style: italic; font-weight: 600; }
+        .card.main-watch { border-bottom: 2px solid #00f2fe; }
+        .card.main-watch .badge { background: rgba(0, 242, 254, 0.15); color: #00f2fe; border: 1px solid rgba(0, 242, 254, 0.3); }
+        .card.main-watch .nickname { color: #64748b; font-style: italic; }
 
-        .card.senior-watch { border-left: 4px solid #3b82f6; }
-        .card.senior-watch .role { color: #3b82f6; }
+        .card.senior-watch { border-bottom: 2px solid #3b82f6; }
+        .card.senior-watch .badge { background: rgba(59, 130, 246, 0.15); color: #3b82f6; border: 1px solid rgba(59, 130, 246, 0.3); }
 
-        .card.watch { border-left: 4px solid #10b981; }
-        .card.watch .role { color: #10b981; }
+        .card.watch { border-bottom: 2px solid #10b981; }
+        .card.watch .badge { background: rgba(16, 185, 129, 0.15); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.3); }
 
-        /* Серверге қосылу блогы */
+        /* IP Блок */
         .ip-box {
-            background: rgba(20, 22, 32, 0.85);
-            backdrop-filter: blur(10px);
+            margin-top: 50px;
+            background: rgba(15, 17, 26, 0.8);
             border: 1px solid rgba(255, 107, 0, 0.3);
-            border-radius: 16px;
             padding: 30px;
+            border-radius: 16px;
             text-align: center;
             width: 100%;
-            max-width: 700px;
-            margin-top: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            max-width: 650px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
         }
 
-        .ip-field {
+        .ip-box h3 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+            color: #fff;
+        }
+
+        .ip-box p {
+            color: #94a3b8;
+            margin-bottom: 20px;
+        }
+
+        .ip-wrapper {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 15px;
-            background: rgba(10, 10, 15, 0.8);
+            gap: 12px;
+            background: #000;
+            padding: 10px 15px 10px 25px;
+            border-radius: 8px;
             border: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 12px 20px;
-            border-radius: 10px;
-            margin-top: 15px;
-            flex-wrap: wrap;
         }
 
-        .ip-text {
-            font-family: monospace;
-            font-size: 1.2rem;
-            color: #ff8800;
-            font-weight: 700;
+        .ip-address {
+            font-family: 'Orbitron', sans-serif;
+            color: #ff6b00;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
         }
 
         .copy-btn {
+            font-family: 'Orbitron', sans-serif;
             background: #ff6b00;
             color: #fff;
             border: none;
-            padding: 8px 18px;
-            border-radius: 8px;
+            padding: 10px 20px;
+            border-radius: 6px;
             font-weight: 700;
+            font-size: 0.8rem;
             cursor: pointer;
-            transition: 0.2s;
+            transition: 0.3s;
         }
 
         .copy-btn:hover {
             background: #e05e00;
+            box-shadow: 0 0 15px rgba(255, 107, 0, 0.6);
         }
     </style>
 </head>
 <body>
 
-    <!-- Тақырыптық Блок -->
     <div class="header">
-        <h1>PERFECT KAZAKHSTAN | RPG</h1>
-        <p>Қазақстандағы ең мықты және қызықты MTA RPG серверлерінің бірі!</p>
+        <h1>PERFECT KAZAKHSTAN <span>RPG</span></h1>
+        <p>Қазақстандағы ең үздік MTA RPG серверлерінің бірі</p>
         <div class="btn-group">
             <a href="https://t.me/PerfectRPG_bot" target="_blank" class="btn">Telegram Канал</a>
             <a href="https://t.me/PerfectRPG_bot" target="_blank" class="btn btn-bot">Telegram Bot</a>
         </div>
     </div>
 
-    <!-- Сервер Басшылығы -->
     <h2 class="section-title">Сервер Басшылығы</h2>
-    
+
     <div class="grid-container">
-        <!-- Владелец -->
         <div class="card owner">
-            <div class="role">Владелец</div>
+            <span class="badge">Владелец</span>
             <div class="nickname">BAURIGO</div>
         </div>
         <div class="card owner">
-            <div class="role">Владелец</div>
+            <span class="badge">Владелец</span>
             <div class="nickname">Sake</div>
         </div>
 
-        <!-- Руководство -->
         <div class="card head">
-            <div class="role">Руководство</div>
+            <span class="badge">Руководство</span>
             <div class="nickname">Richard</div>
         </div>
 
-        <!-- Медиа Куратор -->
         <div class="card media">
-            <div class="role">Медиа Куратор</div>
+            <span class="badge">Медиа Куратор</span>
             <div class="nickname">10bagaNN</div>
         </div>
         <div class="card media">
-            <div class="role">Медиа Куратор</div>
+            <span class="badge">Медиа Куратор</span>
             <div class="nickname">vNET</div>
         </div>
 
-        <!-- Главный смотрящий -->
         <div class="card main-watch">
-            <div class="role">Главный смотрящий</div>
-            <div class="nickname empty">Бос (Вакантно)</div>
+            <span class="badge">Главный смотрящий</span>
+            <div class="nickname">Бос (Вакантно)</div>
         </div>
 
-        <!-- Старший смотрящий -->
         <div class="card senior-watch">
-            <div class="role">Старший смотрящий</div>
+            <span class="badge">Старший смотрящий</span>
             <div class="nickname">Nazarbaevv_</div>
         </div>
 
-        <!-- Смотрящий -->
         <div class="card watch">
-            <div class="role">Смотрящий</div>
+            <span class="badge">Смотрящий</span>
             <div class="nickname">ARSEN4IK</div>
         </div>
         <div class="card watch">
-            <div class="role">Смотрящий</div>
+            <span class="badge">Смотрящий</span>
             <div class="nickname">KETO</div>
         </div>
         <div class="card watch">
-            <div class="role">Смотрящий</div>
+            <span class="badge">Смотрящий</span>
             <div class="nickname">mad1kosh</div>
         </div>
     </div>
 
-    <!-- Серверге қосылу -->
     <div class="ip-box">
-        <h2 style="font-size: 1.5rem; font-weight: 800; text-transform: uppercase;">Серверке қосылу</h2>
-        <p style="color: #a0a5b5; margin-top: 5px; font-size: 0.95rem;">MTA клиентін ашып, келесі IP мекенжайды енгізіңіз:</p>
-        <div class="ip-field">
-            <span class="ip-text" id="ipText">mtasa://87.228.5.7:22003</span>
+        <h3>Серверге қосылу</h3>
+        <p>MTA-ны ашып, келесі мекенжайды енгізіңіз:</p>
+        <div class="ip-wrapper">
+            <span class="ip-address">mtasa://87.228.5.7:22003</span>
             <button class="copy-btn" onclick="copyIP()">Копировать</button>
         </div>
     </div>
@@ -300,7 +300,7 @@
         function copyIP() {
             const ip = "mtasa://87.228.5.7:22003";
             navigator.clipboard.writeText(ip);
-            alert("Сервер IP мекенжайы көшірілді: " + ip);
+            alert("IP мекенжайы көшірілді: " + ip);
         }
     </script>
 </body>
