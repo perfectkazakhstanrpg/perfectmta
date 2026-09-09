@@ -58,7 +58,7 @@
             align-items: center;
             gap: 12px;
             font-weight: 900;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             letter-spacing: 1px;
             color: #fff;
             text-shadow: 0 0 12px rgba(0, 162, 255, 0.6);
@@ -347,7 +347,7 @@
         }
         .close-btn:hover { color: #00a2ff; }
 
-        /* Custom Toast Notification (Көк стильдегі хабарлама) */
+        /* Custom Toast Notification */
         #toast {
             position: fixed;
             bottom: -80px;
@@ -375,7 +375,7 @@
 
     <canvas id="starfield"></canvas>
 
-    <!-- Көк Toast Хабарлама -->
+    <!-- Toast Notification -->
     <div id="toast">
         <i class="fa-solid fa-circle-check" style="font-size: 1.2rem;"></i>
         <span>Ссылка (IP) көшірілді!</span>
@@ -386,7 +386,7 @@
         <div class="top-bar">
             <div class="brand">
                 <i class="fa-solid fa-gamepad" style="color: #00a2ff;"></i>
-                <span>PERFECT PROJECT</span>
+                <span>PERFECT KAZAKHSTAN | RPG</span>
             </div>
             <div class="social-links">
                 <a href="https://t.me/+8u15Xui4Va4wZjJi" target="_blank" class="social-btn">
@@ -412,7 +412,7 @@
         <!-- IP Monitoring -->
         <div class="server-card">
             <div class="server-info">
-                <span class="server-tag">PERFECT</span>
+                <span class="server-tag">SERVER</span>
                 <span class="server-name">#1 | PERFECT KAZAKHSTAN RPG</span>
             </div>
             <button class="connect-btn" onclick="copyIP()">
@@ -422,7 +422,7 @@
 
         <!-- MTA Resources -->
         <div class="section-title">
-            <i class="fa-solid fa-cubes" style="color: #00a2ff;"></i> Барлығына керек заттар
+            <i class="fa-solid fa-circle-info" style="color: #00a2ff;"></i> Толық ақпарат
         </div>
         <div class="useful-grid">
             <div class="useful-card">
@@ -542,7 +542,6 @@
     </div>
 
     <script>
-        // IP көшіру және стильді Toast хабарлама шығару
         function copyIP() {
             const ip = "mtasa://87.228.5.7:22003";
             navigator.clipboard.writeText(ip);
@@ -564,7 +563,6 @@
             }
         }
 
-        // Жұлдыздар эффектісі
         const canvas = document.getElementById('starfield');
         const ctx = canvas.getContext('2d');
 
